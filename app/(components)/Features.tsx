@@ -56,7 +56,7 @@ export default function Features() {
                         OUR CLIENTS
                     </div>
                     <div className="text-3xl uppercase font-extrabold">
-                        companies we've worked with
+                        companies we&apos;ve worked with
                     </div>
                     <div className="font-medium">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna.

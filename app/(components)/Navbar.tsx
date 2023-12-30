@@ -6,7 +6,7 @@ type Links = {
     [index in NavLinks]: string
 }
 
-export default () => {
+export default function Navbar() {
     const links: Links = {
         product: "",
         pricing: "",

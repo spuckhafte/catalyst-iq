@@ -61,7 +61,7 @@ const pricings: Card[] = [
     },
 ]
 
-export default () => {
+export default function Pricing() {
     return <div className="h-[140%] flex flex-col justify-center items-center gap-3 mb-8">
         <div className="uppercase font-bold text-blue-600">
             pricing

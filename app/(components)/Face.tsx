@@ -1,6 +1,6 @@
 import Image from "next/image"
 
-export default () => {
+export default function Face() {
     return <div className="flex justify-between items-center px-[5rem] h-full">
         <div className="flex flex-col basis-1/3 gap-10 ps-8 pb-5">
             <div className="text-5xl font-extrabold">

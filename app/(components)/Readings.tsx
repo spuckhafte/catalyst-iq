@@ -49,7 +49,7 @@ const testies: Card[] = [
     },
 ]
 
-export default () => {
+export default function Readings() {
     return <div className="h-[200%] flex flex-col">
         <div className="basis-3/6 bg-gray-100 flex flex-col gap-2 justify-center items-center">
             <div className="text-blue-600 font-bold">

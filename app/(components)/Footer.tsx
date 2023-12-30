@@ -45,7 +45,7 @@ const fields: Field[] = [
     },
 ]
 
-export default () => {
+export default function Footer() {
     return <div className="h-[70%] bg-black text-white flex flex-col justify-center items-center">
         <div className="basis-5/6 pt-[6rem] px-[15rem] pb-[6rem] w-full flex justify-between">
             <div className="w-fit h-full flex flex-col justify-between">

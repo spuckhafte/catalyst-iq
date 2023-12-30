@@ -20,7 +20,7 @@ const features = [
     },
 ]
 
-export default () => {
+export default function Features() {
     return <div className="h-[110%] flex flex-col">
         <div className="basis-[60%] bg-gray-100 flex flex-col items-center justify-center gap-5 px-20">
             <div className="uppercase text-blue-600 font-bold">

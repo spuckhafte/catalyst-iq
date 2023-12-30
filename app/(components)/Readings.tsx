@@ -1,6 +1,7 @@
 import Image from "next/image"
 
 type Blog = {
+    id: number,
     img?: string,
     topic: string,
     body: string,
@@ -8,6 +9,7 @@ type Blog = {
 }
 
 type Card = {
+    id: number,
     msg: string,
     pfp: string,
     job: string,
@@ -16,14 +18,17 @@ type Card = {
 
 const blogs: Blog[] = [
     {
+        id: 1,
         img: "/blog-placeholder.jpg",
         topic: "ebook",
         body: "How to create your first marketing dashboard",
     }, {
+        id: 2,
         topic: "ebook",
         body: "How to create your first marketing dashboard",
         download: true,
     }, {
+        id: 3,
         topic: "ebook",
         body: "How to create your first marketing dashboard",
         download: true,
@@ -32,16 +37,19 @@ const blogs: Blog[] = [
 
 const testies: Card[] = [
     {
+        id: 1,
         msg: "I didn’t have the time or expertise to undertake marketing. Kalungi has a very well thought out approach… and the fact that you can get their team on a fractional basis is unbelievable.”",
         pfp: "/fake-pfp.png",
         job: "Co-founder, Kalungi",
         name: "Shivansh Kalra",
     }, {
+        id: 2,
         msg: "I didn’t have the time or expertise to undertake marketing. Kalungi has a very well thought out approach… and the fact that you can get their team on a fractional basis is unbelievable.”",
         pfp: "/fake-pfp.png",
         job: "Co-founder, Kalungi",
         name: "Shivansh Kalra",
     }, {
+        id: 3,
         msg: "I didn’t have the time or expertise to undertake marketing. Kalungi has a very well thought out approach… and the fact that you can get their team on a fractional basis is unbelievable.”",
         pfp: "/fake-pfp.png",
         job: "Co-founder, Kalungi",
@@ -81,7 +89,7 @@ export default function Readings() {
             </div>
             <div className="flex w-full h-full p-5 pt-8 justify-center items-center gap-10">
                 {
-                    testies.map(testy => <Card {...testy} />)
+                    testies.map(testy => <Card {...testy} key={testy.id} />)
                 }
             </div>
         </div>

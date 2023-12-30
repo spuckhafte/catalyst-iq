@@ -1,12 +1,14 @@
 import Image from "next/image";
 
 type Field = {
+    id: number,
     name: string,
     links: [linkName: string, linkLocation: string][],
 };
 
 const fields: Field[] = [
     {
+        id: 1,
         name: "product",
         links: [
             ["login", ""],
@@ -16,6 +18,7 @@ const fields: Field[] = [
             ["action items", ""],
         ]
     }, {
+        id: 2,
         name: "product",
         links: [
             ["login", ""],
@@ -25,6 +28,7 @@ const fields: Field[] = [
             ["action items", ""],
         ]
     }, {
+        id: 3,
         name: "product",
         links: [
             ["login", ""],
@@ -34,6 +38,7 @@ const fields: Field[] = [
             ["action items", ""],
         ]
     }, {
+        id: 4,
         name: "product",
         links: [
             ["login", ""],
@@ -85,13 +90,16 @@ export default function Footer() {
             <div className="flex gap-10">
                 {
                     fields.map(field => {
-                        return <div className="flex  flex-col justify-between ">
+                        return <div className="flex  flex-col justify-between " key={field.id}>
                             <div className="font-bold capitalize">
                                 {field.name}
                             </div>
                             {
-                                field.links.map(fieldLink => {
-                                    return <div className="capitalize cursor-pointer select-none">
+                                field.links.map((fieldLink, i) => {
+                                    return <div
+                                        className="capitalize cursor-pointer select-none"
+                                        key={i}
+                                    >
                                         <a>{fieldLink}</a>
                                     </div>
                                 })

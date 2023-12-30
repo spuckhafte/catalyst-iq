@@ -1,6 +1,7 @@
 import Image from "next/image"
 
 type Card = {
+    id: number,
     type: "basic" | "pro" | "enterprise",
 
     price: string,
@@ -15,6 +16,7 @@ type Card = {
 
 const pricings: Card[] = [
     {
+        id: 1,
         type: "basic",
         price: "$30",
         perMonth: true,
@@ -28,6 +30,7 @@ const pricings: Card[] = [
             "3 solution templates",
         ],
     }, {
+        id: 2,
         type: "pro",
         price: "$90",
         perMonth: true,
@@ -47,6 +50,7 @@ const pricings: Card[] = [
         ],
         mostPopular: true,
     }, {
+        id: 3,
         type: "enterprise",
         price: "Custom",
         text1: "Flat fee for up to 200 users",
@@ -70,7 +74,7 @@ export default function Pricing() {
             Select your plan and enjoy
         </div>
         <div className="flex gap-[4rem] px-[6rem]">
-            {pricings.map(pricing => <Card {...pricing} />)}
+            {pricings.map(pricing => <Card {...pricing} key={pricing.id} />)}
         </div>
     </div>
 }
@@ -108,8 +112,8 @@ function Card(props: Card) {
         <div className="h-[2px] w-full bg-slate-100 mb-5"></div>
         <div className="w-full flex flex-col gap-3 pb-[3.5rem]">
             {
-                props.features.map(feat => {
-                    return <div className="flex gap-3">
+                props.features.map((feat, i) => {
+                    return <div className="flex gap-3" key={i}>
                         <Image
                             src="/pricing-tick.svg"
                             alt="tick"

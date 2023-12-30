@@ -2,18 +2,22 @@ import Image from "next/image"
 
 const features = [
     {
+        id: 1,
         icon: "/feat1.svg",
         name: "Reliable system",
         body: "From direct integrations with card networks and banks to checkout flows in the browser, we operate on and optimize at every level of the financial stack."
     }, {
+        id: 2,
         icon: "/feat1.svg",
         name: "Reliable system",
         body: "From direct integrations with card networks and banks to checkout flows in the browser, we operate on and optimize at every level of the financial stack."
     }, {
+        id: 3,
         icon: "/feat1.svg",
         name: "Reliable system",
         body: "From direct integrations with card networks and banks to checkout flows in the browser, we operate on and optimize at every level of the financial stack."
     }, {
+        id: 4,
         icon: "/feat1.svg",
         name: "Reliable system",
         body: "From direct integrations with card networks and banks to checkout flows in the browser, we operate on and optimize at every level of the financial stack."
@@ -32,7 +36,7 @@ export default function Features() {
             <div className="flex gap-10 pt-10">
                 {
                     features.map(feat => {
-                        return <div className="flex flex-col gap-3">
+                        return <div className="flex flex-col gap-3" key={feat.id}>
                             <Image src={feat.icon} alt={feat.icon} width={50} height={50}/>
                             <div className="font-extrabold capitalize">
                                 {feat.name}

@@ -25,8 +25,11 @@ export default function Navbar() {
                 className="pt-2"
             />
             {
-                Object.entries(links).map(link => {
-                    return <div className="uppercase font-semibold cursor-pointer select-none">
+                Object.entries(links).map((link, i) => {
+                    return <div
+                        className="uppercase font-semibold cursor-pointer select-none"
+                        key={i}
+                    >
                         <a>{link[0]}</a>
                     </div>
                 })
